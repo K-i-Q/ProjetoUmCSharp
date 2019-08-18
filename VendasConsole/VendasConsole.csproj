@@ -49,7 +49,9 @@
     <Compile Include="Util\RemocaoDeCaracter.cs" />
     <Compile Include="Util\Validacao.cs" />
     <Compile Include="View\CadastrarCliente.cs" />
+    <Compile Include="View\CadastrarVendedor.cs" />
     <Compile Include="View\ListarClientes.cs" />
+    <Compile Include="View\ListarVendedor.cs" />
     <Compile Include="View\Menu.cs" />
     <Compile Include="View\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,12 +4,12 @@ using VendasConsole.Model;
 
 namespace VendasConsole.View
 {
-    class ListarClientes
+    class ListarVendedores
     {
         public static void Renderizar()
         {
-            Console.WriteLine("Listar clientes");
-            foreach (Cliente v in ClienteDAO.ListarClientes())
+            Console.WriteLine("Listar vendedores");
+            foreach (Vendedor v in VendedorDAO.ListarVendedor())
             {
                 Console.WriteLine(v);
             }

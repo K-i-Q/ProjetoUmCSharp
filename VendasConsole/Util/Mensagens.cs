@@ -18,7 +18,7 @@ namespace VendasConsole.Util
         }
         public static string CadastradoComSucesso()
         {
-            return "Cliente foi cadastrado!";
+            return "Cadastrado com Sucesso!";
         }
     }
 }

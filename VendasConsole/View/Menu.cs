@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VendasConsole.View
 {
@@ -18,7 +14,7 @@ namespace VendasConsole.View
             switch (opcaoMenu)
             {
                 case 0:
-                    SairPrograma.Renderizar(continuar);
+                    continuar = SairPrograma.Renderizar();
                     break;
                 case 1:
                     CadastrarCliente.Renderizar();
@@ -26,6 +22,13 @@ namespace VendasConsole.View
                 case 2:
                     ListarClientes.Renderizar();
                     break;
+                case 3:
+                    CadastrarVendedor.Renderizar();
+                    break;
+                case 4:
+                    ListarVendedores.Renderizar();
+                    break;
+
                 default:
                     Console.WriteLine("Erro...");
                     break;
