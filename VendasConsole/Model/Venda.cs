@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using VendasConsole.DAO;
 
@@ -9,35 +10,40 @@ namespace VendasConsole.Model
 {
     class Venda
     {
-        public List<Vendedor> vendedores = null;
-        public static List<Produto> produtos = null;
-        public List<Cliente> clientes = null;
+        public static List<Produto> produtos;
+        public static List<Venda> vendas;
 
-        public static Produto produto = null;
-        public static Cliente cliente = null;
-        public static Vendedor vendedor = null;
+        public static Produto produto;
+        public static Cliente cliente;
+        public static Vendedor vendedor;
+
         public static int quantidade;
         public long Id { get; private set; }
+        public static long GlobalId;
+
         public DateTime CriadoEm { get; set; }
 
         public Venda()
         {
-            Id++;
-            CriadoEm = DateTime.Now;
-            clientes = new List<Cliente>();
-            vendedores = new List<Vendedor>();
-            produtos = new List<Produto>();
 
-            clientes = ClienteDAO.ListarClientes();
-            vendedores = VendedorDAO.ListarVendedores();
+            Id = Interlocked.Increment(ref GlobalId);
+            CriadoEm = DateTime.Now;
+
+            produtos = new List<Produto>();
+            vendas = new List<Venda>();
+
+            vendedor = new Vendedor();
+            produto = new Produto();
+            cliente = new Cliente();
         }
         
-        public static void RegistrarItensVenda(Cliente c, Vendedor v, List<Produto> p, int q)
+        public static void RegistrarItensVenda(Cliente c, Vendedor v, List<Produto> p, int q, Venda venda)
         {
             cliente = c;
             vendedor = v;
             produtos = p;
             quantidade = q;
+            vendas.Add(venda);
 
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using VendasConsole.DAO;
 using VendasConsole.Model;
 

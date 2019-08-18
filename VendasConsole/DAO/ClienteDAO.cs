@@ -11,13 +11,25 @@ namespace VendasConsole.DAO
 
         }
         private static List<Cliente> listaClientes = new List<Cliente>();
+        private static List<Venda> listaCompras = new List<Venda>();
+        private static Cliente cliente = new Cliente();
 
         public static List<Cliente> ListarClientes()
         {
             return listaClientes;
         }
 
-        public static string adicionarClientes(Cliente cliente)
+        public static List<Venda> ListarCompras(Cliente cliente)
+        {
+            
+            return cliente.ListaCompras;
+        }
+
+        //public static void AdicionarCompra(Venda venda)
+        //{
+        //    cliente.ListaCompras.Add(venda);
+        //}
+        public static string AdicionarClientes(Cliente cliente)
         {
             if (!Validacao.ValidarCpf(cliente.Cpf))
             {

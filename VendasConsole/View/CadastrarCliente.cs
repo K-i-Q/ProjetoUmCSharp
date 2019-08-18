@@ -23,7 +23,7 @@ namespace VendasConsole.View
             Console.WriteLine("Digite o cpf");
             cliente.Cpf = Console.ReadLine();
 
-            Console.WriteLine(ClienteDAO.adicionarClientes(cliente));
+            Console.WriteLine(ClienteDAO.AdicionarClientes(cliente));
 
         }
         

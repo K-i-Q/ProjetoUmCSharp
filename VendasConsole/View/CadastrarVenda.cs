@@ -27,16 +27,16 @@ namespace VendasConsole.View
 
             Console.WriteLine("Registrar Venda");
 
-            Console.WriteLine("Digite o cpf do cliente");
-            cliente.Cpf = Console.ReadLine();
-            cliente = VendaDAO.PesquisarCliente(cliente.Cpf);
-
-            Console.WriteLine("Digite o cpf do vendedor");
-            vendedor.Cpf = Console.ReadLine();
-            vendedor = VendaDAO.PesquisarVendedor(vendedor.Cpf);
 
             do
             {
+                Console.WriteLine("Digite o cpf do cliente");
+                cliente.Cpf = Console.ReadLine();
+                cliente = VendaDAO.PesquisarCliente(cliente.Cpf);
+
+                Console.WriteLine("Digite o cpf do vendedor");
+                vendedor.Cpf = Console.ReadLine();
+                vendedor = VendaDAO.PesquisarVendedor(vendedor.Cpf);
                 produto = new Produto();
                 Console.WriteLine("Digite o produto");
                 produto.Nome = Console.ReadLine();
@@ -65,7 +65,8 @@ namespace VendasConsole.View
 
             if (confirmar == 1)
             {
-                Venda.RegistrarItensVenda(cliente, vendedor, produtos, quantidade);
+                Venda.RegistrarItensVenda(cliente, vendedor, produtos, quantidade, venda);
+                //ClienteDAO.AdicionarCompra(venda);
                 Console.WriteLine(VendaDAO.AdicionarVenda(venda));
             }
             else if (confirmar == 0)
@@ -77,8 +78,6 @@ namespace VendasConsole.View
                 Console.WriteLine("outra coisa...");
 
             }
-            Console.WriteLine("pressione para sair");
-            Console.ReadKey();
 
         }
     }

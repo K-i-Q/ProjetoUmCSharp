@@ -14,16 +14,29 @@ namespace VendasConsole.DAO
         {
 
         }
-
-        private static List<Venda> listaVendas = new List<Venda>();
+        private static List<Venda> listaVendasPorCliente = new List<Venda>();
         private static List<Cliente> listaClientes = new List<Cliente>();
         private static List<Vendedor> listaVendedores = new List<Vendedor>();
         private static List<Produto> listaProdutos = new List<Produto>();
 
+
         public static List<Venda> ListarVendas()
         {
-            return listaVendas;
+            return RegistraVenda.ListarVendas();
         }
+
+        public static List<Venda> ListarVendasPorCliente(string cpf)
+        {
+            Cliente cliente;
+
+            var encontrado = listaClientes.Where(c => c.ToString().Contains(cpf)).ToList();
+            cliente = encontrado.ElementAt(0);
+
+            listaVendasPorCliente = ClienteDAO.ListarCompras(cliente);
+            return listaVendasPorCliente;
+        }
+
+        
 
         public static Cliente PesquisarCliente(string cpf)
         {
@@ -77,13 +90,13 @@ namespace VendasConsole.DAO
 
         public static string AdicionarVenda(Venda venda)
         {
-            if (listaVendas.Contains(venda))
+            if (RegistraVenda.ListarVendas().Contains(venda))
             {
                 return Mensagens.VendaExistente();
             }
             else
             {
-                listaVendas.Add(venda);
+                RegistraVenda.CadastrarVenda(venda);
                 return Mensagens.CadastradoComSucesso();
             }
 

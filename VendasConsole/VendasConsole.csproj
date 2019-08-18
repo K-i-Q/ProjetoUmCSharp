@@ -48,6 +48,7 @@
     <Compile Include="DAO\VendedorDAO.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Produto.cs" />
+    <Compile Include="Model\RegistraVenda.cs" />
     <Compile Include="Model\Venda.cs" />
     <Compile Include="Util\Mensagens.cs" />
     <Compile Include="Util\RemocaoDeCaracter.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="View\ListarClientes.cs" />
     <Compile Include="View\ListarProduto.cs" />
     <Compile Include="View\ListarVendas.cs" />
+    <Compile Include="View\ListarVendasPorCliente.cs" />
     <Compile Include="View\ListarVendedor.cs" />
     <Compile Include="View\Menu.cs" />
     <Compile Include="View\Program.cs" />

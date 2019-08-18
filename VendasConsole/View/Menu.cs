@@ -48,6 +48,10 @@ namespace VendasConsole.View
                     ListarVendas.Renderizar();
                     continuar = true;
                     break;
+                case 9:
+                    ListarVendasPorCliente.Renderizar();
+                    continuar = true;
+                    break;
 
                 default:
                     Console.WriteLine("Erro...");
