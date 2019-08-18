@@ -12,7 +12,7 @@ namespace VendasConsole.DAO
         }
         private static List<Vendedor> listaVendedores = new List<Vendedor>();
 
-        public static List<Vendedor> ListarVendedor()
+        public static List<Vendedor> ListarVendedores()
         {
             return listaVendedores;
         }

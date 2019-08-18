@@ -32,6 +32,14 @@ namespace VendasConsole.View
                     ListarVendedores.Renderizar();
                     continuar = true;
                     break;
+                case 5:
+                    CadastrarProduto.Renderizar();
+                    continuar = true;
+                    break;
+                case 6:
+                    ListarProduto.Renderizar();
+                    continuar = true;
+                    break;
 
                 default:
                     Console.WriteLine("Erro...");

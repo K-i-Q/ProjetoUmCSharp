@@ -9,7 +9,7 @@ namespace VendasConsole.View
         public static void Renderizar()
         {
             Console.WriteLine("Listar vendedores");
-            foreach (Vendedor v in VendedorDAO.ListarVendedor())
+            foreach (Vendedor v in VendedorDAO.ListarVendedores())
             {
                 Console.WriteLine(v);
             }

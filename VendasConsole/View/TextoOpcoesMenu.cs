@@ -12,6 +12,8 @@ namespace VendasConsole.View
             Console.WriteLine("2 - Listar Clientes");
             Console.WriteLine("3 - Cadastrar Vendedor");
             Console.WriteLine("4 - Listar Vendedores");
+            Console.WriteLine("5 - Cadastrar Produto");
+            Console.WriteLine("6 - Listar Produtos");
             Console.WriteLine("0 - Sair");
         }
     }

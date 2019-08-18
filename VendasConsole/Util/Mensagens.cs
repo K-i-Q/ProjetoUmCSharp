@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace VendasConsole.Util
 {
     class Mensagens
@@ -15,6 +10,10 @@ namespace VendasConsole.Util
         public static string CpfInvalido()
         {
             return "CPF inválido, por favor digite um CPF válido";
+        }
+        public static string ProdutoExistente()
+        {
+            return "Produto já existe em nossa base de dados";
         }
         public static string CadastradoComSucesso()
         {

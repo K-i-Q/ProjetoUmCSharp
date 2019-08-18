@@ -43,14 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\VendedorDAO.cs" />
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Produto.cs" />
     <Compile Include="Util\Mensagens.cs" />
     <Compile Include="Util\RemocaoDeCaracter.cs" />
     <Compile Include="Util\Validacao.cs" />
     <Compile Include="View\CadastrarCliente.cs" />
+    <Compile Include="View\CadastrarProduto.cs" />
     <Compile Include="View\CadastrarVendedor.cs" />
     <Compile Include="View\ListarClientes.cs" />
+    <Compile Include="View\ListarProduto.cs" />
     <Compile Include="View\ListarVendedor.cs" />
     <Compile Include="View\Menu.cs" />
     <Compile Include="View\Program.cs" />
