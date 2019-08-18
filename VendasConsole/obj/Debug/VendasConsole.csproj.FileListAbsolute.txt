@@ -1,0 +1,7 @@
+C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.exe.config
+C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.exe
+C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.pdb
+C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.csprojResolveAssemblyReference.cache
+C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.csproj.CoreCompileInputs.cache
+C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.exe
+C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.pdb
