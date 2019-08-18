@@ -15,6 +15,14 @@ namespace VendasConsole.Util
         {
             return "Produto já existe em nossa base de dados";
         }
+        public static string VendaExistente()
+        {
+            return "Esta venda já foi cadastrada";
+        }
+        public static string SemEstoque()
+        {
+            return "Não temos esta quantia em estoque";
+        }
         public static string CadastradoComSucesso()
         {
             return "Cadastrado com Sucesso!";

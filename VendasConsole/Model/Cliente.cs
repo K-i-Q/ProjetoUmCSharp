@@ -6,6 +6,11 @@ namespace VendasConsole.Model
     {
         #region C#
 
+        //Declarãção de propriedades
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public DateTime CriadoEm { get; set; }
+
         //Construtor SEM parâmetro
         public Cliente()
         {
@@ -18,11 +23,6 @@ namespace VendasConsole.Model
             Cpf = cpf;
         }
 
-        //Declarãção de propriedades
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-
-        public DateTime CriadoEm { get; set; }
 
         //ToString()
         public override string ToString()
