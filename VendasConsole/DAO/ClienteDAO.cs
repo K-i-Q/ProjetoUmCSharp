@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VendasConsole.Model;
+using VendasConsole.Util;
 
 namespace VendasConsole.DAO
 {
@@ -20,20 +21,26 @@ namespace VendasConsole.DAO
             return listaClientes;
         }
 
-        public static bool adicionarClientes(Cliente cliente)
+        public static string adicionarClientes(Cliente cliente)
         {
+            if (!Validacao.ValidarCpf(cliente.Cpf))
+            {
+
+                return Mensagens.CpfInvalido();
+            }
             if (!(listaClientes.Contains(cliente)))
             {
+                cliente.Cpf = RemocaoDeCaracter.RemoverCaracter(cliente.Cpf);
                 listaClientes.Add(cliente);
                 //Retorna true quando o CPF inserido para cadastro não existe na lista
-                return false;
+                return Mensagens.CadastradoComSucesso();
             }
             else
             {
-                return true;
+                return Mensagens.CpfExistente();
             }
         }
 
-        
+
     }
 }

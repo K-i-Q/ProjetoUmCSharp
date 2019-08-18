@@ -8,13 +8,17 @@ namespace VendasConsole.Util
 {
     class Mensagens
     {
-        public static void CpfExistente()
+        public static string CpfExistente()
         {
-            Console.WriteLine("CPF já está cadastrado!");
+            return "CPF já está cadastrado!";
         }
-        public static void CadastradoComSucesso()
+        public static string CpfInvalido()
         {
-            Console.WriteLine("Cliente foi cadastrado!");
+            return "CPF inválido, por favor digite um CPF válido";
+        }
+        public static string CadastradoComSucesso()
+        {
+            return "Cliente foi cadastrado!";
         }
     }
 }

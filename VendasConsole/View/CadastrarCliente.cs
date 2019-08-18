@@ -15,21 +15,16 @@ namespace VendasConsole.View
         
         public static void Renderizar()
         {
-            bool cpfInseridoCadastrado;
+            
             Cliente cliente = new Cliente();
             Console.WriteLine("Cadastrar cliente");
             Console.WriteLine("Digite o nome");
             cliente.Nome = Console.ReadLine();
             Console.WriteLine("Digite o cpf");
             cliente.Cpf = Console.ReadLine();
-            if (ClienteDAO.adicionarClientes(cliente))
-            {
-                Mensagens.CpfExistente();
-            }
-            else
-            {
-                Mensagens.CadastradoComSucesso();
-            }
+
+            Console.WriteLine(ClienteDAO.adicionarClientes(cliente));
+
         }
         
 

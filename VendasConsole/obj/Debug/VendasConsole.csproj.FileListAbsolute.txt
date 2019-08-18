@@ -5,3 +5,10 @@ C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\De
 C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.csproj.CoreCompileInputs.cache
 C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.exe
 C:\Users\Aluno.DEVE106131\source\repos\Carlos\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.pdb
+C:\DESENVOLVIMENTO\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.exe.config
+C:\DESENVOLVIMENTO\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.exe
+C:\DESENVOLVIMENTO\ProjetoVendas\VendasConsole\bin\Debug\VendasConsole.pdb
+C:\DESENVOLVIMENTO\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.csprojAssemblyReference.cache
+C:\DESENVOLVIMENTO\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.csproj.CoreCompileInputs.cache
+C:\DESENVOLVIMENTO\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.exe
+C:\DESENVOLVIMENTO\ProjetoVendas\VendasConsole\obj\Debug\VendasConsole.pdb
