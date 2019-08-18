@@ -4,7 +4,7 @@ namespace VendasConsole.View
 {
     class Menu
     {
-        public static void Renderizar(bool continuar)
+        public static bool Renderizar(bool continuar)
         {
             int opcaoMenu = 0;
 
@@ -14,27 +14,33 @@ namespace VendasConsole.View
             switch (opcaoMenu)
             {
                 case 0:
-                    continuar = SairPrograma.Renderizar();
+                    continuar = SairPrograma.Renderizar(continuar);
                     break;
                 case 1:
                     CadastrarCliente.Renderizar();
+                    continuar = true;
                     break;
                 case 2:
                     ListarClientes.Renderizar();
+                    continuar = true;
                     break;
                 case 3:
                     CadastrarVendedor.Renderizar();
+                    continuar = true;
                     break;
                 case 4:
                     ListarVendedores.Renderizar();
+                    continuar = true;
                     break;
 
                 default:
                     Console.WriteLine("Erro...");
+                    continuar = true;
                     break;
             }
             Console.WriteLine("Aperte qualquer tecla para continuar...");
             Console.ReadKey();
+            return continuar;
         }
     }
 }

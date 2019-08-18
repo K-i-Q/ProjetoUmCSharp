@@ -8,7 +8,7 @@ namespace VendasConsole.View
 {
     class SairPrograma
     {
-        public static bool Renderizar()
+        public static bool Renderizar(bool continuar)
         {
             Console.WriteLine("Sair");
             return false;

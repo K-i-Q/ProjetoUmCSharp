@@ -17,7 +17,8 @@ namespace VendasConsole.View
 
             do
             {
-                Menu.Renderizar(continuar);
+                continuar = Menu.Renderizar(continuar);
+
             } while (continuar);
         }
     }
