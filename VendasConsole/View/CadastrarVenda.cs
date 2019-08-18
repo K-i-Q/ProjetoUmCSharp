@@ -17,7 +17,7 @@ namespace VendasConsole.View
             Venda venda = new Venda();
             Cliente cliente = new Cliente();
             Vendedor vendedor = new Vendedor();
-            Produto produto = new Produto();
+            Produto produto;
             List<Produto> produtos = new List<Produto>();
             int quantidade = 0;
             bool temEstoque = false;
@@ -37,6 +37,7 @@ namespace VendasConsole.View
 
             do
             {
+                produto = new Produto();
                 Console.WriteLine("Digite o produto");
                 produto.Nome = Console.ReadLine();
                 produto = VendaDAO.PesquisarProduto(produto.Nome);
