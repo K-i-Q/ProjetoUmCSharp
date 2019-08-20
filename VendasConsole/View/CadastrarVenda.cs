@@ -15,29 +15,30 @@ namespace VendasConsole.View
         {
             int continuar = 0;
 
-
-            do
-            {
                 Venda venda = new Venda();
                 Cliente cliente = new Cliente();
                 Vendedor vendedor = new Vendedor();
+
+                Console.WriteLine("Digite o cpf do cliente");
+                cliente.Cpf = Console.ReadLine();
+                cliente = VendaDAO.PesquisarCliente(cliente.Cpf);
+                venda.Cliente = cliente;
+
+                Console.WriteLine("Digite o cpf do vendedor");
+                vendedor.Cpf = Console.ReadLine();
+                vendedor = VendaDAO.PesquisarVendedor(vendedor.Cpf);
+                venda.Vendedor = vendedor;
+            do
+            {
                 Produto produto = new Produto();
-                List<Produto> produtos = new List<Produto>();
                 int quantidade = 0;
                 bool temEstoque = false;
                
                 Console.WriteLine("Registrar Venda");
-                Console.WriteLine("Digite o cpf do cliente");
-                cliente.Cpf = Console.ReadLine();
-                Venda.cliente = VendaDAO.PesquisarCliente(cliente.Cpf);
-
-                Console.WriteLine("Digite o cpf do vendedor");
-                vendedor.Cpf = Console.ReadLine();
-                Venda.vendedor = VendaDAO.PesquisarVendedor(vendedor.Cpf);
-
                 Console.WriteLine("Digite o produto");
                 produto.Nome = Console.ReadLine();
-                Venda.produto = VendaDAO.PesquisarProduto(produto.Nome);
+                produto = VendaDAO.PesquisarProduto(produto.Nome);
+                venda.Produto = produto;
 
                 Console.WriteLine("Digite a quantidade");
                 quantidade = Convert.ToInt32(Console.ReadLine());
@@ -50,13 +51,13 @@ namespace VendasConsole.View
                 }
                 else
                 {
-                   produtos.Add(produto);
+                   venda.ListaDeProdutosDaVenda.Add(venda.Produto);
                 }
                 Console.WriteLine("Registrar mais produtos para esta venda? Pressione 1 para continuar ou 0 para sair ");
                 continuar = Convert.ToInt32(Console.ReadLine());
                 if(continuar == 0)
                 {
-                    VendaDAO.RegistrarItensVenda(cliente, vendedor, produtos, quantidade, venda);
+                    VendaDAO.RegistrarItensVenda(cliente, vendedor, venda.ListaDeProdutosDaVenda, quantidade, venda);
                 }
             } while (continuar != 0);
             

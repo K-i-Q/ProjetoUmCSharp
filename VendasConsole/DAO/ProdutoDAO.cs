@@ -17,7 +17,7 @@ namespace VendasConsole.DAO
             return listaProdutos;
         }
 
-        public static string adicionarProduto(Produto produto)
+        public static string AdicionarProduto(Produto produto)
         {
             if (listaProdutos.Contains(produto))
             {

@@ -10,10 +10,13 @@ namespace VendasConsole.Model
 {
     class Venda
     {
-        public static Produto produto = new Produto();
-        public static Cliente cliente = new Cliente();
-        public static Vendedor vendedor = new Vendedor();
-        public static List<Produto> produtos = new List<Produto>();
+        public Produto Produto { get; set; }
+        public Cliente Cliente { get; set; }
+        public Vendedor Vendedor { get; set; }
+
+        public int Quantidade { get; set; }
+
+        public List<Produto> ListaDeProdutosDaVenda = new List<Produto>();
 
 
         public long Id { get; private set; }
@@ -32,15 +35,15 @@ namespace VendasConsole.Model
         public override string ToString()
         {
             StringBuilder comprovante = new StringBuilder();
-            
+
 
             comprovante.Append("Venda: " + Id);
-            comprovante.Append("\nCliente: " + cliente.Nome);
-            comprovante.Append("\nVendedor: " + vendedor.Nome);
+            comprovante.Append("\nCliente: " + Cliente.Nome);
+            comprovante.Append("\nVendedor: " + Vendedor.Nome);
             comprovante.Append("\nData e Hora da Venda: " + CriadoEm);
             comprovante.Append("\nProdutos:");
 
-            foreach (Produto produto in produtos)
+            foreach (Produto produto in ListaDeProdutosDaVenda)
             {
                 comprovante.Append("\n" + produto);
             }

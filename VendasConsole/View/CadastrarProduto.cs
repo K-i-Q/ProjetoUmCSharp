@@ -21,7 +21,7 @@ namespace VendasConsole.View
             //produto.Preco = Convert.ToDouble(Console.ReadLine());
             //Console.WriteLine("Digite a quantidade");
             //Produto.Quantidade = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(ProdutoDAO.adicionarProduto(produto));
+            Console.WriteLine(ProdutoDAO.AdicionarProduto(produto));
 
         }
     }

@@ -10,12 +10,12 @@ namespace VendasConsole.DAO
 {
     class VendaDAO
     {
-        private static List<Produto> produtos = new List<Produto>();
+        private static List<Produto> ListaDeProdutosDaVenda = new List<Produto>();
         private static List<Venda> ListaDeTodasAsVendas = new List<Venda>();
         private static List<Venda> listaVendasPorCliente = new List<Venda>();
         private static List<Cliente> listaClientes;
         private static List<Vendedor> listaVendedores;
-        private static List<Produto> listaProdutos;
+        private static List<Produto> ListaDeTodosProdutosCadastrados;
 
         private static Produto produto = new Produto();
         private static Cliente cliente = new Cliente();
@@ -74,10 +74,10 @@ namespace VendasConsole.DAO
 
         public static Produto PesquisarProduto(string nome)
         {
-            listaProdutos = ProdutoDAO.ListarProdutos();
+            ListaDeTodosProdutosCadastrados = ProdutoDAO.ListarProdutos();
             Produto produto;
 
-            var encontrados = listaProdutos.Where(c => c.ToString().Contains(nome)).ToList();
+            var encontrados = ListaDeTodosProdutosCadastrados.Where(c => c.ToString().Contains(nome)).ToList();
             produto = encontrados.ElementAt(0);
             if (encontrados != null)
             {
@@ -94,12 +94,16 @@ namespace VendasConsole.DAO
             }            
             return false;
         }
+        public static List<Produto> RetornaListaDeProdutosDaVenda()
+        {
+            return ListaDeProdutosDaVenda;
+        }
 
         public static void RegistrarItensVenda(Cliente c, Vendedor v, List<Produto> p, int q, Venda ve)
         {
             cliente = c;
             vendedor = v;
-            produtos = p;
+            ListaDeProdutosDaVenda = p;
             quantidade = q;
             ListaDeTodasAsVendas.Add(ve);
         }

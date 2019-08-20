@@ -10,13 +10,13 @@ namespace VendasConsole.DAO
         {
 
         }
-        private static List<Cliente> listaClientes = new List<Cliente>();
-        private static List<Venda> listaCompras = new List<Venda>();
-        private static Cliente cliente = new Cliente();
+        private static List<Cliente> ListaDeClientes = new List<Cliente>();
+        private static List<Venda> ListaCompras = new List<Venda>();
+        private static Cliente Cliente = new Cliente();
 
         public static List<Cliente> ListarClientes()
         {
-            return listaClientes;
+            return ListaDeClientes;
         }
 
         public static List<Venda> ListarCompras(Cliente cliente)
@@ -24,6 +24,7 @@ namespace VendasConsole.DAO
             
             return cliente.ListaCompras;
         }
+
 
         //public static void AdicionarCompra(Venda venda)
         //{
@@ -36,12 +37,12 @@ namespace VendasConsole.DAO
 
                 return Mensagens.CpfInvalido();
             }
-            if (!(listaClientes.Contains(cliente)))
+            if (!(ListaDeClientes.Contains(cliente)))
             {
                 cliente.Cpf = RemocaoDeCaracter.RemoverCaracter(cliente.Cpf);
-                listaClientes.Add(cliente);
+                ListaDeClientes.Add(cliente);
                 Cliente c = new Cliente("João", "64417641056");
-                listaClientes.Add(c);
+                ListaDeClientes.Add(c);
                 //Retorna true quando o CPF inserido para cadastro não existe na lista
                 return Mensagens.CadastradoComSucesso();
             }
@@ -50,6 +51,30 @@ namespace VendasConsole.DAO
                 return Mensagens.CpfExistente();
             }
         }
+
+        //public static bool CadastrarCliente(Cliente c)
+        //{
+        //    if (BuscarCliente(c) != null)
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+            
+        //}
+        //public static Cliente BuscarCliente(Cliente c)
+        //{
+        //    foreach (Cliente clienteCadastrado in ListaDeClientes)
+        //    {
+        //        if (clienteCadastrado.Cpf.Equals(c.Cpf))
+        //        {
+        //            return clienteCadastrado;
+        //        }
+        //    }
+        //    return null;
+        //}
 
 
     }
