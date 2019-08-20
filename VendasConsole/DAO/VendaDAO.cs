@@ -10,20 +10,27 @@ namespace VendasConsole.DAO
 {
     class VendaDAO
     {
+        private static List<Produto> produtos = new List<Produto>();
+        private static List<Venda> ListaDeTodasAsVendas = new List<Venda>();
+        private static List<Venda> listaVendasPorCliente = new List<Venda>();
+        private static List<Cliente> listaClientes;
+        private static List<Vendedor> listaVendedores;
+        private static List<Produto> listaProdutos;
+
+        private static Produto produto = new Produto();
+        private static Cliente cliente = new Cliente();
+        private static Vendedor vendedor= new Vendedor();
+
+        public static int quantidade;
+
         private VendaDAO()
         {
-
+            
         }
-        private static List<Venda> listaVendasPorCliente = new List<Venda>();
-        private static List<Cliente> listaClientes = new List<Cliente>();
-        private static List<Vendedor> listaVendedores = new List<Vendedor>();
-        private static List<Produto> listaProdutos = new List<Produto>();
+        
 
 
-        public static List<Venda> ListarVendas()
-        {
-            return RegistraVenda.ListarVendas();
-        }
+
 
         public static List<Venda> ListarVendasPorCliente(string cpf)
         {
@@ -88,20 +95,21 @@ namespace VendasConsole.DAO
             return false;
         }
 
-        public static string AdicionarVenda(Venda venda)
+        public static void RegistrarItensVenda(Cliente c, Vendedor v, List<Produto> p, int q, Venda ve)
         {
-            if (RegistraVenda.ListarVendas().Contains(venda))
-            {
-                return Mensagens.VendaExistente();
-            }
-            else
-            {
-                RegistraVenda.CadastrarVenda(venda);
-                return Mensagens.CadastradoComSucesso();
-            }
-
-
-
+            cliente = c;
+            vendedor = v;
+            produtos = p;
+            quantidade = q;
+            ListaDeTodasAsVendas.Add(ve);
         }
+
+        public static List<Venda> ListarTodasAsVendas()
+        {
+            return ListaDeTodasAsVendas;
+        }
+
+       
+
     }
 }

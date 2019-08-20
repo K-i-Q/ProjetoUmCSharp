@@ -40,6 +40,8 @@ namespace VendasConsole.DAO
             {
                 cliente.Cpf = RemocaoDeCaracter.RemoverCaracter(cliente.Cpf);
                 listaClientes.Add(cliente);
+                Cliente c = new Cliente("João", "64417641056");
+                listaClientes.Add(c);
                 //Retorna true quando o CPF inserido para cadastro não existe na lista
                 return Mensagens.CadastradoComSucesso();
             }

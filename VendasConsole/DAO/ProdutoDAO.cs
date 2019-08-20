@@ -26,7 +26,10 @@ namespace VendasConsole.DAO
             else
             {
                 listaProdutos.Add(produto);
+                Produto p = new Produto("nescau", 7, 40);
+                listaProdutos.Add(p);
                 return Mensagens.CadastradoComSucesso();
+                
             }
         }
     }

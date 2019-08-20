@@ -10,14 +10,12 @@ namespace VendasConsole.Model
 {
     class Venda
     {
-        public static List<Produto> produtos;
-        public static List<Venda> vendas;
+        public static Produto produto = new Produto();
+        public static Cliente cliente = new Cliente();
+        public static Vendedor vendedor = new Vendedor();
+        public static List<Produto> produtos = new List<Produto>();
 
-        public static Produto produto;
-        public static Cliente cliente;
-        public static Vendedor vendedor;
 
-        public static int quantidade;
         public long Id { get; private set; }
         public static long GlobalId;
 
@@ -25,32 +23,16 @@ namespace VendasConsole.Model
 
         public Venda()
         {
-
             Id = Interlocked.Increment(ref GlobalId);
             CriadoEm = DateTime.Now;
-
-            produtos = new List<Produto>();
-            vendas = new List<Venda>();
-
-            vendedor = new Vendedor();
-            produto = new Produto();
-            cliente = new Cliente();
         }
-        
-        public static void RegistrarItensVenda(Cliente c, Vendedor v, List<Produto> p, int q, Venda venda)
-        {
-            cliente = c;
-            vendedor = v;
-            produtos = p;
-            quantidade = q;
-            vendas.Add(venda);
 
-        }
 
         //ToString()
         public override string ToString()
         {
             StringBuilder comprovante = new StringBuilder();
+            
 
             comprovante.Append("Venda: " + Id);
             comprovante.Append("\nCliente: " + cliente.Nome);

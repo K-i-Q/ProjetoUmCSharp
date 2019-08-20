@@ -14,11 +14,11 @@ namespace VendasConsole.View
         {
 
             Vendedor vendedor = new Vendedor();
-            Console.WriteLine("Cadastrar Vendedor");
-            Console.WriteLine("Digite o nome");
-            vendedor.Nome = Console.ReadLine();
-            Console.WriteLine("Digite o cpf");
-            vendedor.Cpf = Console.ReadLine();
+            //Console.WriteLine("Cadastrar Vendedor");
+            //Console.WriteLine("Digite o nome");
+            //vendedor.Nome = Console.ReadLine();
+            //Console.WriteLine("Digite o cpf");
+            //vendedor.Cpf = Console.ReadLine();
 
             Console.WriteLine(VendedorDAO.adicionarVendedor(vendedor));
 

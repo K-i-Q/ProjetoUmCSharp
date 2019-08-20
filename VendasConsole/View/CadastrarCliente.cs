@@ -17,11 +17,11 @@ namespace VendasConsole.View
         {
             
             Cliente cliente = new Cliente();
-            Console.WriteLine("Cadastrar cliente");
-            Console.WriteLine("Digite o nome");
-            cliente.Nome = Console.ReadLine();
-            Console.WriteLine("Digite o cpf");
-            cliente.Cpf = Console.ReadLine();
+            //Console.WriteLine("Cadastrar cliente");
+            // Console.WriteLine("Digite o nome");
+            // cliente.Nome = Console.ReadLine();
+            // Console.WriteLine("Digite o cpf");
+            // cliente.Cpf = Console.ReadLine();
 
             Console.WriteLine(ClienteDAO.AdicionarClientes(cliente));
 

@@ -10,10 +10,9 @@ namespace VendasConsole.View
         public static void Renderizar()
         {
             Console.WriteLine("Listar Vendas");
-            foreach (Venda v in VendaDAO.ListarVendas())
-            {
-                Console.WriteLine(v);
-            }
+            
+            VendaDAO.ListarTodasAsVendas().ForEach(Console.WriteLine);
+
         }
     }
 }

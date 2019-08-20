@@ -10,12 +10,15 @@ namespace VendasConsole.Model
         public Vendedor()
         {
             CriadoEm = DateTime.Now;
+            Cpf = "06159287060";
+            Nome = "Maria";
         }
         //Construtor COM parâmetro
-        public Vendedor(string cpf)
+        public Vendedor(string cpf, string nome)
         {
             CriadoEm = DateTime.Now;
             Cpf = cpf;
+            Nome = nome;
         }
 
         //Declarãção de propriedades

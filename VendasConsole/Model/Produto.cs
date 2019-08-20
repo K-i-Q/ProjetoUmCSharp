@@ -7,6 +7,16 @@ namespace VendasConsole.Model
         public Produto()
         {
             CriadoEm = DateTime.Now;
+            Nome = "arroz";
+            Preco = 5;
+            Quantidade = 50;
+        }
+        public Produto(string nome, double preco, int quantidade)
+        {
+            CriadoEm = DateTime.Now;
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
         }
 
         //Declarãção de propriedades

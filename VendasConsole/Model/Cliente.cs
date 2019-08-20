@@ -18,6 +18,8 @@ namespace VendasConsole.Model
         {
             CriadoEm = DateTime.Now;
             ListaCompras = new List<Venda>();
+            Cpf = "75047501078";
+            Nome = "Carlos";
         }
         //Construtor COM parâmetro
         public Cliente(string cpf)
@@ -25,6 +27,13 @@ namespace VendasConsole.Model
             CriadoEm = DateTime.Now;
             ListaCompras = new List<Venda>();
             Cpf = cpf;
+        }
+        public Cliente(string nome, string cpf)
+        {
+            CriadoEm = DateTime.Now;
+            ListaCompras = new List<Venda>();
+            Cpf = cpf;
+            Nome = nome;
         }
 
 
